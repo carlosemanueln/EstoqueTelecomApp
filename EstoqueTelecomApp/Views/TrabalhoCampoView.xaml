@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstoqueTelecomApp.Views.TrabalhoCampoView"
+             Title="Operação em Campo">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Modo Offline (Sem Rede)" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="#D32F2F" />
+
+            <Label Text="Os dados registrados aqui ficarão salvos na memória interna do aparelho até que haja conexão." 
+                   HorizontalOptions="Center" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="14" />
+
+            <Label Text="Equipamento Instalado:" FontAttributes="Bold" Margin="0,15,0,0"/>
+            <Entry x:Name="txtModelo" Placeholder="Ex: Antena 5G MIMO, Caixa de Emenda" />
+
+            <Label Text="Fabricante:" FontAttributes="Bold" />
+            <Entry x:Name="txtFabricante" Placeholder="Ex: Ericsson, Nokia" />
+
+            <Label Text="Quantidade Utilizada:" FontAttributes="Bold" />
+            <Entry x:Name="txtQuantidade" Placeholder="Ex: 2" Keyboard="Numeric" />
+
+            <Button Text="Gravar no Aparelho (SQLite)" 
+                    Clicked="OnSalvarOfflineClicked" 
+                    BackgroundColor="#D32F2F" 
+                    TextColor="White" 
+                    HeightRequest="50"
+                    CornerRadius="10" 
+                    Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

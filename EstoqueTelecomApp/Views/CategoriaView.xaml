@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstoqueTelecomApp.Views.CategoriaView"
+             Title="Cadastro de Categorias">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="20">
+
+            <Label Text="Nova Categoria de Equipamento" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="#2B0B98" />
+
+            <Label Text="Nome da Categoria:" FontAttributes="Bold" />
+            <Entry x:Name="txtNome" 
+                   Placeholder="Ex: Fibra Óptica, Roteadores, ONUs" />
+
+            <Label Text="Descrição:" FontAttributes="Bold" />
+            <Editor x:Name="txtDescricao" 
+                    Placeholder="Descreva o que pertence a esta categoria..."
+                    HeightRequest="100" />
+
+            <Button Text="Salvar no MySQL" 
+                    Clicked="OnSalvarClicked" 
+                    BackgroundColor="#2B0B98" 
+                    TextColor="White" 
+                    HeightRequest="50"
+                    CornerRadius="10" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

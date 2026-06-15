@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="EstoqueTelecomApp.Views.EquipamentoView"
+             Title="Cadastro de Equipamentos">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30" Spacing="15">
+
+            <Label Text="Cadastro de Equipamento" 
+                   FontSize="24" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center" 
+                   TextColor="#2B0B98" />
+
+            <Label Text="Modelo do Equipamento:" FontAttributes="Bold" />
+            <Entry x:Name="txtModelo" 
+                   Placeholder="Ex: OLT 8 PON, ONT Wi-Fi 6" />
+
+            <Label Text="Fabricante:" FontAttributes="Bold" />
+            <Entry x:Name="txtFabricante" 
+                   Placeholder="Ex: Greatek, Huawei, Nokia" />
+
+            <Label Text="Quantidade Inicial em Estoque:" FontAttributes="Bold" />
+            <Entry x:Name="txtQuantidade" 
+                   Placeholder="Ex: 50" 
+                   Keyboard="Numeric" />
+
+            <Label Text="ID da Categoria:" FontAttributes="Bold" />
+            <Entry x:Name="txtIdCategoria" 
+                   Placeholder="Ex: 1 (ID salvo anteriormente)" 
+                   Keyboard="Numeric" />
+
+            <Button Text="Salvar no MySQL" 
+                    Clicked="OnSalvarClicked" 
+                    BackgroundColor="#2B0B98" 
+                    TextColor="White" 
+                    HeightRequest="50"
+                    CornerRadius="10" 
+                    Margin="0,20,0,0"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
