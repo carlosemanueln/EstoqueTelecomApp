@@ -1,0 +1,7 @@
+<Solution>
+  <Folder Name="/Itens de Solução/">
+    <File Path="README.md" />
+    <File Path="script_banco.sql" />
+  </Folder>
+  <Project Path="EstoqueTelecomApp/EstoqueTelecomApp.csproj" />
+</Solution>
